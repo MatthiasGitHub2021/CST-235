@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+      
+      <h:head>
+      <title>Test Form</title>
+      </h:head>
+      
+      <body>
+		<h:form>
+		<h:outputLabel for="firstName">First Name: </h:outputLabel>
+		<h:inputText id="firstName" value="#{User.firstName}" label="First Name:"/>
+		<br/>
+		<h:outputLabel for="lastName">Last Name: </h:outputLabel>
+		<h:inputText id="lastName" value="#{User.lastName}" label="Last Name:"/>
+		<br/>
+		<h:commandButton action="#{FormController.onSubmit(User)}" value="Submit" />
+		<h:commandButton action="#{FormController.onFlash(User)}" value="Flash" />
+		</h:form>
+      </body>
+      
+      </html>
