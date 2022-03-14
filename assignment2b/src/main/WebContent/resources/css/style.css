@@ -1,0 +1,33 @@
+@charset "ISO-8859-1";
+
+body {
+	background: white;
+	font: 18px Arial, sans-serif;
+}
+h1{
+	color: purple;
+}
+
+table{
+	border-collapse: collapse;
+	width: 50%;
+	height: 40px;
+}
+
+th, td{
+	border: 1px solid black;
+}
+
+.orders {
+ border: thin solid black;
+}
+.ordersHeader {
+ text-align: center;
+ font-style: italic;
+ color: Snow;
+ background: Teal;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}

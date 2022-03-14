@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+      
+      <h:head>
+      <title>Test Response</title>  
+      </h:head>
+      
+      <body>
+      <ui:composition template="/layouts/commonLayout.xhtml">
+      <ui:define name="content">
+      Hello #{User.firstName} #{User.lastName}. Your orders are:
+      <br/>
+      
+	  <h:dataTable value="#{FormController.service.orders}" var="o"
+	  styleClass="orders"
+	  headerClass="ordersHeader"
+	  columnClass="oddRow,evenRow">
+		    
+		  <h:column>
+		  <f:facet name="header">Order Number:</f:facet>
+		  <center>#{o.orderNum}</center>
+		  </h:column>
+		  
+		  <h:column>
+		  <f:facet name="header">Product Name:</f:facet>
+		  <center>#{o.productName}</center>
+		  </h:column>
+		  
+		  <h:column>
+		  <f:facet name="header">Price:</f:facet>
+		  <center>#{o.price}</center>
+		  </h:column>
+		  
+		  <h:column>
+		  <f:facet name="header">Qty:</f:facet>
+		  <center>#{o.quantity}</center>
+		  </h:column>
+		  
+	  </h:dataTable>
+      
+      <br/>
+	  <button type="button" name="back" onclick="history.back()">Go back</button>
+      </ui:define>
+      </ui:composition>
+      </body>
+      
+      </html>
