@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+      
+      <h:head>
+      <title>Main</title>
+      </h:head>
+      
+      <body>
+      
+      
+		<h:form>
+		<h:outputLabel for="firstOccurence">First Word Occurrence: </h:outputLabel>
+		<h:inputText id="firstOccurence" value="#{User.firstOccurrence}" label="First Occurrence:"/><br/>
+		<h:commandButton action="#{InputController.getFirst(User)}" value="Submit" />
+		<br/>
+		<h:outputLabel for="numberOfOccurrences">Number Of Occurrences: </h:outputLabel>
+		<h:inputText id="numberOfOccurrences" value="numberOfOccurrences" label="Number Of Occurrences:"/><br/>
+		<h:commandButton action="#{InputController.getNumAll(User)}" value="Submit" />
+		<br/>
+		<h:outputLabel for="book">Book: </h:outputLabel>
+		<h:inputText id="book" value="book" label="Book:"/>
+		<br/>
+		<h:outputLabel for="chapter">Chapter: </h:outputLabel>
+		<h:inputText id="chapter" value="chapter" label="Chapter:"/>
+		<br/>
+		<h:outputLabel for="verse">Verse: </h:outputLabel>
+		<h:inputText id="verse" value="verse" label="Verse:"/>
+		<br/>
+		<h:commandButton action="#{InputController.getLookup(User)}" value="Submit" />
+		<h:messages/>
+		</h:form>
+      
+    
+      
+      </body>
+      </html>
